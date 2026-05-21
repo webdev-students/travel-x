@@ -1,0 +1,78 @@
+@import 'variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+}
+.btn::active {
+  transform: scale(0.97);
+}
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--plain);
+  box-shadow: 0 4px 14px rgba(12, 163, 231, 0.35);
+}
+.btn-primary:hover {
+  background: #0b91cf;
+  box-shadow: 0 6px 20px rgba(12, 163, 231, 0.5);
+}
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--plain);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(12, 163, 231, 0.3);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--plain);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+}
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+.btn-ghost {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  border: none;
+  padding: 10px 16px;
+}
+.btn-ghost:hover {
+  color: var(--plain);
+  background: rgba(255, 255, 255, 0.06);
+}
