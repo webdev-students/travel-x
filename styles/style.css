@@ -1,0 +1,250 @@
+@import 'variables.css';
+/* Header default styles (transparent) */
+header {
+  position: sticky;
+  top: 0;
+}
+header .navbar {
+  background: transparent;
+  justify-content: space-around;
+  height: 8vh;
+  padding-top: 3rem;
+}
+header .logo {
+  filter: brightness(0) invert(1);
+}
+header .logo svg {
+  background-color: rgba(5, 71, 102, 0.07);
+  padding: 3px;
+  border-radius: 10px;
+}
+header .navbar nav {
+  display: flex;
+  gap: 20px;
+}
+header .nav-menu {
+  color: var(--plain);
+}
+header .nav-menu:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+/* Header scrolled-state styles (White Bg) */
+header.scrolled .navbar {
+  background: var(--plain);
+  justify-content: space-around;
+  height: 8vh;
+  box-shadow: var(--box-shadow-1);
+  transition: all 0.5s ease-in-out;
+  padding-top: 0;
+}
+header.scrolled .logo {
+  filter: none;
+  color: var(--dark);
+}
+header.scrolled .logo svg {
+  background-color: rgba(5, 71, 102, 0.07);
+  padding: 3px;
+  border-radius: 10px;
+}
+header.scrolled .navbar nav {
+  display: flex;
+  gap: 20px;
+}
+header.scrolled .nav-menu {
+  color: var(--dark);
+}
+header.scrolled .nav-menu:hover {
+  background: rgba(105, 200, 255, 0.08);
+  border: 1px solid rgba(105, 200, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+header.scrolled .btn-secondary {
+  background: rgba(105, 200, 255, 0.05);
+  color: var(--primary-color);
+  border: 1px solid rgba(105, 200, 255, 0.15);
+}
+header.scrolled .btn-secondary:hover {
+  background: rgba(105, 200, 255, 0.1);
+  border-color: rgba(105, 200, 255, 0.25);
+}
+
+/* Hero section */
+.hero {
+  min-height: 110vh;
+  margin-top: -8vh;
+  background:
+    linear-gradient(135deg, #102442a1, #102442be),
+    url(../assets/images/flight2.jpg) center/cover no-repeat;
+}
+.hero-section {
+  min-height: 100vh;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+}
+.hero-left {
+  color: var(--plain);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero-sale-alert {
+  width: fit-content;
+  justify-content: start;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+.hero-left h1 {
+  font-size: 4.2rem;
+  line-height: 100%;
+}
+.hero-left h1 span {
+  color: var(--secondary-color);
+}
+.hero-left p {
+  max-width: 480px;
+  line-height: 1.8rem;
+}
+/* Flight search */
+.flight-search-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 1.5rem;
+  backdrop-filter: blur(20px);
+  width: 100%;
+}
+
+.fs-tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 4px;
+  margin-bottom: 1.25rem;
+}
+
+.fs-tab {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.fs-tab.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.fs-grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.fs-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.fs-grid2 .fs-field {
+  margin-bottom: 0;
+}
+
+.fs-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.fs-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 0 12px;
+  height: 48px;
+  transition:
+    border 0.2s,
+    background 0.2s;
+}
+
+.fs-input-wrap:focus-within {
+  border-color: rgba(12, 163, 231, 0.6);
+  background: rgba(12, 163, 231, 0.07);
+}
+
+.fs-input-wrap svg {
+  color: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.fs-input-wrap input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  width: 100%;
+}
+
+.fs-input-wrap input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.fs-input-wrap input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1) opacity(0.3);
+  cursor: pointer;
+}
+
+.fs-search-btn {
+  width: 100%;
+  margin-top: 4px;
+  border-radius: 999px;
+}
+
+.flight-search-card.one-way .fs-return,
+.flight-search-card.multi .fs-return {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+  .hero-section {
+    flex-direction: column;
+    justify-content: end;
+    padding: 2rem;
+    gap: 4rem;
+  }
+  .hero-left {
+    min-height: 80vh;
+    justify-content: end;
+  }
+  .navbar nav,
+  .portal {
+    visibility: hidden;
+  }
+}
