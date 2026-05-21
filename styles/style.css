@@ -74,7 +74,7 @@ header.scrolled .btn-secondary:hover {
 /* Hero section */
 .hero {
   min-height: 110vh;
-  margin-top: -8vh;
+  margin-top: -10vh;
   background:
     linear-gradient(135deg, #102442a1, #102442be),
     url(../assets/images/flight2.jpg) center/cover no-repeat;
